@@ -1,7 +1,7 @@
 // frontend/script.js
  console.log("✅ JS loaded");
 
-const backendURL = "http://localhost:5000";
+const backendURL = "https://mental-health-journal-and-resource-app.onrender.com";
 // Change if using different port
 
 // Register
