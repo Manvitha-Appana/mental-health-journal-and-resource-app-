@@ -1,0 +1,38 @@
+<!-- frontend/mood.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+  <h1>Mental Health Journal & Resource App</h1>
+</header>
+
+  <div class="container">
+    <h2>Daily Mood Tracker</h2>
+    
+    <form id="moodForm">
+      <label for="moodSelect">How are you feeling today?</label>
+      <select id="moodSelect" required>
+        <option value="">Select your mood</option>
+        <option value="Happy">😊 Happy</option>
+        <option value="Sad">😢 Sad</option>
+        <option value="Stressed">😰 Stressed</option>
+        <option value="Angry">😠 Angry</option>
+        <option value="Excited">🤩 Excited</option>
+        <option value="Tired">🥱 Tired</option>
+      </select>
+      <button type="submit">Submit Mood</button>
+    </form>
+
+    <h3>Your Mood History</h3>
+    <ul id="moodHistory"></ul>
+  </div>
+   <button onclick="location.href='dashboard.html'">← Back to Dashboard</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

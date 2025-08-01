@@ -1,0 +1,42 @@
+<!-- frontend/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+  <h1>Mental Health Journal & Resource App</h1>
+</header>
+
+  <div class="container">
+    <h2>Welcome to Your Dashboard</h2>
+
+    <h3>Create a Journal Entry</h3>
+    <form id="journalForm">
+      <textarea id="entry" rows="5" placeholder="Write your thoughts..." required></textarea>
+      <button type="submit">Save Entry</button>
+    </form>
+
+    <h3>Your Journal Entries</h3>
+    <ul id="journalList"></ul>
+    <a href="mood.html">
+  <button>Go to Mood Tracker</button>
+    </a>
+    <h3>Helpful Resources</h3>
+    <ul>
+      <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov</a></li>
+      <li><a href="https://www.nimh.nih.gov/" target="_blank">National Institute of Mental Health</a></li>
+      <li><a href="https://www.talkspace.com/" target="_blank">Talkspace</a></li>
+    </ul>
+    <a href="contact.html">Contact Us</a>
+
+    <button id="logoutBtn" style="margin-top: 20px;">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
