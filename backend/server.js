@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config({ path: __dirname + "/.env" });
 console.log("MONGO_URI:", process.env.MONGO_URI); 
 const journalRoutes = require('./routes/journalRoutes');
@@ -25,6 +26,13 @@ app.use("/api/journals", require("./routes/journalRoutes"));
 app.use("/api/mood", require("./routes/moodRoutes"));
 app.use("/api/resources", require("./routes/resourceRoutes"));
 app.use('/api/contact', contactRoutes);
+
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+// ✅ Fallback route - show login.html by default
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend", "login.html"));
+});
 
 // Start the server
 const PORT = process.env.PORT || 5000;
