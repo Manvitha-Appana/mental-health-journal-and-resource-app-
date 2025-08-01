@@ -30,9 +30,10 @@ app.use('/api/contact', contactRoutes);
 app.use(express.static(path.join(__dirname, "../frontend")));
 
 // ✅ Fallback route - show login.html by default
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend", "login.html"));
+app.get("/*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend", "login.html"));
 });
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;
